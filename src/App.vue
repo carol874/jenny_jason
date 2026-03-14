@@ -1,136 +1,141 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const abrirMenu = ref(false);
+const abrirMenu = ref(false)
 
 
-
+import imgMeio from '@/assets/tomoko.jpg'
+import imgFlor1 from '@/assets/amber.jpg'
+import imgFlor2 from '@/assets/tirza.jpg'
+import imgFlor3 from '@/assets/mina.jpg'
+import imgFlor4 from '@/assets/sidney.jpg'
+import imgRegistro from '@/assets/coisa.jpg'
+import imgPresentes from '@/assets/simona.jpg'
 </script>
 
 <template>
-  <header class="cabeca">
-    <nav class="topo">
-      <div class="um">
-       <h1>J&J</h1>
+
+<header class="cabeca">
+  <nav class="topo">
+
+    <div class="um">
+      <h1>J&J</h1>
       <h3>JUNE 23RD,2025</h3>
-      </div>
-      <button @click="abrirMenu = !abrirMenu" class="hamburguer">
-        ☰
-      </button>
-      <div class="dois" :class="{ ativo: abrirMenu }">
-        <li>
-          <a href="">HOME</a>
-        </li>
-        <li>
-          <a href="">OUR STORY</a>
-        </li>
-        <li>
-          <a href="">DETAILS</a>
-        </li>
-        <li>
-          <a href="">RSVP</a>
-        </li>
-      </div>
-      
-    </nav>
-  </header>
-
-  <main>
-    <h1 class="titulo">
-      JENNY & JASON
-    </h1>
-    <section class="meio">
-      <img src="./assets/tomoko-uji-kxvn1ogpTtE-unsplash.jpg" alt="">
-      <p>
-      
-With love and gratitude, we invite you to share in the joy of our wedding day.
-Saturday, September 20, 2025.
-The Golden Elm Manor, St. Augustine, New York.
-      </p>
-    </section>
-
-    <section class="imagens">
-      <div class="flor">
-        
-             <img src="./assets/amber-kipp-1hRtZo55-DE-unsplash.jpg" alt="">
-             <p>
-              HOME
-             </p>
-        </div>
-
-        <div class="flor">
-            <img src="./assets/tirza-van-dijk-cNGUw-CEsp0-unsplash.jpg" alt="">
-            <p>
-              THE DETAILS
-            </p>
-        
-        </div>
-
-        <div class="flor">
-     
-            <img src="./assets/mina-rad-8fS2YgV1cBs-unsplash.jpg" alt="">
-            <p>
-              RSVP
-            </p>
-          </div>
-
-
-        <div class="flor">
-            <img src="./assets/sidney-pearce-yPMJliKzyc4-unsplash.jpg" alt="">
-            <p>
-              REGISTRY
-            </p>
-      </div>
-
-    </section>
-
-    <section class="quase">
-      <div>
-        <img src="./assets/coisa.jpg" alt="">
-      </div>
-      <div class="registro">
-        <h1>RESGISTRY</h1>
-      </div>
-
-      <div class="presenca">
-    <p>
-Your presence is the most cherished gift. Should you wish to contribute, we’ve created a honeymoon registry to help us embark on a memorable adventure to the Amalfi Coast.
-</p>
-
-      </div>
-
-      <div class="botao">
-        <p>GO TO REGISTRY</p>
-      </div>
-      
-    </section>
-
-
-    <section class="presentes">
-        <div class="img">
-          <img src="./assets/simona-sergi-9AosJc43_nQ-unsplash (1).jpg" alt="">
-        </div>
-        <div class="texto">
-     <h1>
-      PRESENT IDEAS
-     </h1>
-        </div>
-      
-    </section>
-  </main>
-  <footer>
-    <div>
-      <p>J&J</p>
     </div>
-    <div>
-      <p>
-        SATURDAY, <br>
-        SEPTEMBER 20,2025
-      </p>
+
+    <button @click="abrirMenu = !abrirMenu" class="hamburguer">
+      ☰
+    </button>
+
+    <div class="dois" :class="{ ativo: abrirMenu }">
+      <li><a href="">HOME</a></li>
+      <li><a href="">OUR STORY</a></li>
+      <li><a href="">DETAILS</a></li>
+      <li><a href="">RSVP</a></li>
     </div>
-  </footer>
-  
+
+  </nav>
+</header>
+
+
+<main>
+
+<h1 class="titulo">
+  JENNY & JASON
+</h1>
+
+<section class="meio">
+  <img :src="imgMeio" alt="">
+  <p>
+    With love and gratitude, we invite you to share in the joy of our wedding day.
+    Saturday, September 20, 2025.
+    The Golden Elm Manor, St. Augustine, New York.
+  </p>
+</section>
+
+
+<section class="imagens">
+
+<div class="flor">
+  <img :src="imgFlor1" alt="">
+  <p>HOME</p>
+</div>
+
+<div class="flor">
+  <img :src="imgFlor2" alt="">
+  <p>THE DETAILS</p>
+</div>
+
+<div class="flor">
+  <img :src="imgFlor3" alt="">
+  <p>RSVP</p>
+</div>
+
+<div class="flor">
+  <img :src="imgFlor4" alt="">
+  <p>REGISTRY</p>
+</div>
+
+</section>
+
+
+<section class="quase">
+
+<div>
+  <img :src="imgRegistro" alt="">
+</div>
+
+<div class="registro">
+  <h1>REGISTRY</h1>
+</div>
+
+<div class="presenca">
+  <p>
+    Your presence is the most cherished gift. Should you wish to contribute,
+    we’ve created a honeymoon registry to help us embark on a memorable
+    adventure to the Amalfi Coast.
+  </p>
+</div>
+
+<div class="botao">
+  <p>GO TO REGISTRY</p>
+</div>
+
+</section>
+
+
+<section class="presentes">
+
+<div class="img">
+  <img :src="imgPresentes" alt="">
+</div>
+
+<div class="texto">
+  <h1>PRESENT IDEAS</h1>
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div>
+  <p>J&J</p>
+</div>
+
+<div>
+  <p>
+    SATURDAY <br>
+    SEPTEMBER 20,2025
+  </p>
+</div>
+
+</footer>
+
 </template>
+
 
 <style scoped>
 .cabeca{
